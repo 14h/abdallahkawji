@@ -11,13 +11,13 @@ export default class Projects extends Component{
             <h1 className='title'>Projects</h1>
             <div className="Projects">
                 <div className='project'>
-                    <div className='project-title'><h2>DUDERI.DE</h2></div>
+                    <div className='project-title '><a className="link" href="https://duderi.de/en/" target="_blank"><h2>DUDERI.DE</h2></a></div>
                     <h4>(in Development)</h4>
                     <div className='project-description'><h5>Build with ReactJS, NodeJS, Firebase Hosting, Firebase Functions, Firebase realtime Database</h5></div>
                 </div>
                 <div className='project'>
 
-                    <div className='project-title'><h2>KAMIRANKHALIL.DE</h2></div>
+                    <div className='project-title '><a className="link" href="https://kamirankhalil.com" target="_blank"><h2>KAMIRANKHALIL.COM</h2></a></div>
                     <h4>(Live)</h4>
                     <div className='project-description'><h5>Build with ReactJS, NodeJS, Firebase Hosting</h5></div>
                 </div>

@@ -2,6 +2,7 @@
     height: 100%;
     width: 100vw;
     padding-top: 40vh;
+    padding-bottom: 40vw;
 }
 #Intro .scroll{
     margin-top: 40vh;
@@ -9,6 +10,7 @@
 h3,h4, h5,h6{
     color: white;
     font-family: 'Perfograma';
+    
     margin: 2em 1em;
 }
 @-webkit-keyframes typing { from { width: 0; } }

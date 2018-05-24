@@ -1,6 +1,13 @@
 #NavigationBar{
-    position: fixed;
-    top: 5vh;
+    /* position: fixed; */
+    /* top: 5vh; */
     width: 100vw;
-    left: 5vw;
+    /* left: 5vw; */
+}
+#NavigationBar .navbar-list{
+    width: 100vw;
+    /* padding: 2px; */
+}
+#NavigationBar .navbar-list-element{
+    display: inline-block;
 }

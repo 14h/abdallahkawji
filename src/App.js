@@ -9,11 +9,40 @@ import Projects from './Projects'
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.handleClick = this.handleClick.bind(this);
+    
+  }
+  handleClick(event){
+    let width = window.innerWidth || document.body.clientWidth;
+
+    let links = document.getElementsByClassName('link');
+
+    for (let i = 0; i < links.length; i++) {
+        // console.log(links[i]); 
+        if(event.clientY > links[i].getBoundingClientRect().top 
+        && event.clientY < links[i].getBoundingClientRect().top+links[i].getBoundingClientRect().height 
+        && event.clientX > links[i].getBoundingClientRect().x 
+        && event.clientX < links[i].getBoundingClientRect().x+ links[i].getBoundingClientRect().width){
+            links[i].click()
+            console.log('clicked')
+
+        }
+        
+    }
+
+  }
+  componentDidMount() {
+    document.addEventListener('click', this.handleClick);
+   
+  }
   render() {
     return (
       <div className="App">
         <Backgroundcomponent />
-        {/* <NavigationBar /> */}
+        <NavigationBar />
         <Intro />
         {/* <FullpageComponent /> */}
         <Projects />

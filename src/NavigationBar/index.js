@@ -8,15 +8,19 @@ export default class NavigationBar extends Component{
     return (
         
         <div id="NavigationBar">
-            <ul className="menu-links">
-              {/* <li className="menu-links-list-item" >
-                  Home
-              </li>
-              <li className="menu-links-list-item" >
-                  Projects
-              </li> */}
-              
-          </ul>
+            <div className='navbar-list'>
+                <div className='navbar-list-element link' onClick={()=>{ document.getElementById('Projects').scrollIntoView();window.scrollBy(0, -50);}}>
+                    <h3>Projects</h3>
+                </div>
+                <div className='navbar-list-element link' onClick={()=>{ document.getElementById('Experiences').scrollIntoView();window.scrollBy(0, -50);}}>
+                    <h3>Experiences</h3>
+                </div>
+                <div className='navbar-list-element link' onClick={()=>{ document.getElementById('Contact').scrollIntoView()}}>
+                    <h3>Get in Touch!</h3>
+                </div>
+                
+
+            </div>
         </div>
       
     );

@@ -8,3 +8,7 @@ body {
   font-family: 'Perfograma'; /*a name to be used later*/
   src: url('./Perfograma.otf'); /*URL to font*/
 }
+@font-face {
+  font-family: 'Glamor'; /*a name to be used later*/
+  src: url('./Glamor.otf'); /*URL to font*/
+}
