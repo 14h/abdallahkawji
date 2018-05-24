@@ -4,6 +4,7 @@ import Backgroundcomponent from './Backgroundcomponent';
 import NavigationBar from './NavigationBar';
 import Experiences from './Experiences';
 import Contact from './Contact';
+import Intro from './Intro'
 import './App.css';
 
 class App extends Component {
@@ -11,7 +12,8 @@ class App extends Component {
     return (
       <div className="App">
         <Backgroundcomponent />
-        <NavigationBar />
+        {/* <NavigationBar /> */}
+        <Intro />
         {/* <FullpageComponent /> */}
         <Experiences />
         <Contact />

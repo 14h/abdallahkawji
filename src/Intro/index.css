@@ -1,0 +1,29 @@
+#Intro{
+    height: 100vh;
+    width: 100vw;
+    padding-top: 40vh;
+}
+#Intro .scroll{
+    margin-top: 40vh;
+}
+h3, h6{
+    color: white;
+    font-family: 'Perfograma';
+    margin: 2em 1em;
+}
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+@media (min-width: 1000px){
+    .Intro-text { 
+        /* font: bold 300% Consolas, Monaco, monospace; */
+        border-right: .1em solid #FFF;
+        width: 16.5em; 
+        width: 91ch;
+        margin: 2em 1em;
+        white-space: nowrap;
+        overflow: hidden;
+        -webkit-animation: typing 2s steps(108, end),
+                   blink-caret .5s step-end infinite alternate;
+    }
+}
