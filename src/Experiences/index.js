@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 
 import './index.css';
 
-export default class Backgroundcomponent extends Component{
+export default class Experiences extends Component{
   constructor(props) {
     super(props);
 
@@ -14,7 +14,8 @@ export default class Backgroundcomponent extends Component{
   handleClick(event){
     let width = window.innerWidth || document.body.clientWidth;
     let clickable = document.getElementsByClassName('clickable')[0];
-    if(event.clientY > 570 && event.clientY < 650 && event.clientX < (width/2)+40 && event.clientX > (width/2)-40 ){
+  
+    if(event.clientY > clickable.getBoundingClientRect().y && event.clientY < clickable.getBoundingClientRect().y+80 && event.clientX < (width/2)+40 && event.clientX > (width/2)-40 ){
       clickable.click()
     }
 

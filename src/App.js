@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Backgroundcomponent from './Backgroundcomponent';
 import NavigationBar from './NavigationBar';
 import Experiences from './Experiences';
+import Contact from './Contact';
 import './App.css';
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
         <NavigationBar />
         {/* <FullpageComponent /> */}
         <Experiences />
+        <Contact />
       </div>
     );
   }

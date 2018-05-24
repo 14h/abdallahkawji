@@ -9,12 +9,12 @@ export default class NavigationBar extends Component{
         
         <div id="NavigationBar">
             <ul className="menu-links">
-              <li className="menu-links-list-item" >
+              {/* <li className="menu-links-list-item" >
                   Home
               </li>
               <li className="menu-links-list-item" >
                   Projects
-              </li>
+              </li> */}
               
           </ul>
         </div>
