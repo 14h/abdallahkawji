@@ -6,7 +6,7 @@
 #Intro .scroll{
     margin-top: 40vh;
 }
-h3, h6{
+h3,h4, h5,h6{
     color: white;
     font-family: 'Perfograma';
     margin: 2em 1em;
@@ -19,11 +19,11 @@ h3, h6{
         /* font: bold 300% Consolas, Monaco, monospace; */
         border-right: .1em solid #FFF;
         width: 16.5em; 
-        width: 91ch;
+        width: 92ch;
         margin: 2em 1em;
         white-space: nowrap;
         overflow: hidden;
-        -webkit-animation: typing 2s steps(108, end),
+        -webkit-animation: typing 5s steps(112, end),
                    blink-caret .5s step-end infinite alternate;
     }
 }

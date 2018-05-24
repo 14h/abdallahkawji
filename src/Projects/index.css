@@ -1,0 +1,42 @@
+#Projects{
+    height: 100vh;
+    min-height: 880px;
+    width: 80vw;
+    margin-left: 10vw;
+}
+#Projects .title{
+    text-align: center
+}
+#Projects .project{
+    text-align: center;
+    width: 45%;
+    /* min-width: 500px;
+    height: 400px; */
+}
+.project-pic{
+    width: 100%;
+    max-height: 300px ;
+}
+.Projects{
+    width: 100%;
+    display: inline-flex;
+}
+.project-title{
+    font-size: 175%;
+}
+
+
+@media (max-width: 768px){
+    #Projects {
+        
+        width: 100vw;
+        margin-left: 0px;
+    }
+    .Projects{
+        display: block;
+    }
+    #Projects .project {
+        text-align: center;
+        width: 100%;
+    }
+}

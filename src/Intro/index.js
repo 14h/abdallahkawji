@@ -8,7 +8,7 @@ export default class Intro extends Component{
     return (
         
         <div id="Intro">
-        <h3 className="Intro-text">Hello, my name is Abdallah Kawji, I'm a computer science Student and a full-stack developer based in Berlin.</h3>
+        <h3 className="Intro-text">Hello, my name is Abdallah Kawji, I'm a computer science Student and a full-stack web developer based in Berlin.</h3>
             {/* <h3 className='delayedShow'>
             <span className='letter'>H</span>
             <span className='letter'>e</span>
