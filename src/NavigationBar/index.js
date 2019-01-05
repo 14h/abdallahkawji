@@ -20,7 +20,7 @@ const registerScrollFunction = ( ) => {
 	window.onscroll = () => {
 		let currentScrollPos = window.pageYOffset;
 		if( navBar() ){
-			if (currentScrollPos < 50 ) {
+			if (currentScrollPos < 10 ) {
                 resetStyles();
 			} else {
                 mainText().style.fontSize = '20px';
