@@ -27,10 +27,10 @@ export default class Intro extends Component{
       charSpan.innerHTML = char;
       window.setTimeout(()=>{
         intro.appendChild( bar );
-      }, i*70);
+      }, i*50);
       window.setTimeout(()=>{
         intro.appendChild( charSpan );
-      }, i*50);
+      }, i*30);
     });
 
     window.setInterval(()=>{
