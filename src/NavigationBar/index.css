@@ -1,13 +1,34 @@
-#NavigationBar{
-    /* position: fixed; */
-    /* top: 5vh; */
-    width: 100vw;
-    /* left: 5vw; */
+/* * {cursor: none;} */
+
+.NavigationBar:hover{
+    color: #FFF;
 }
-#NavigationBar .navbar-list{
-    width: 100vw;
-    /* padding: 2px; */
+.NavigationBar:visited{
+    color: #FFF;
 }
-#NavigationBar .navbar-list-element{
-    display: inline-block;
+.NavigationBar:active{
+    color: #FFF;
 }
+
+.nav-item:link{
+    text-decoration: none;
+    color: #FFF;
+    padding: 10px;
+    font-size: 12px;
+    font-family      : 'Major Mono Display', monospace;
+    border-bottom: solid 1px transparent;
+}
+.nav-item:visited{
+    color: #FFF;
+}
+.nav-item:active{
+    color: #FFF;
+}
+.nav-item:hover{
+    color: #FFF;
+    border-bottom: solid 1px #FFF;
+}
+.nav-item.selected{
+    border-bottom-color: #FFF;
+}
+

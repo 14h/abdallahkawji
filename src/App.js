@@ -1,56 +1,31 @@
-import React, { Component } from 'react';
-// import FullpageComponent from './FullpageComponent'
-import Backgroundcomponent from './Backgroundcomponent';
-import NavigationBar from './NavigationBar';
-import Experiences from './Experiences';
-import Contact from './Contact';
-import Intro from './Intro'
-import Projects from './Projects'
+import React, { Component }   from 'react';
+import NavigationBar          from './NavigationBar';
+import Projects               from './Projects';
+import Experiences            from './Experiences';
+import Contact                from './Contact';
+import Intro                  from './Intro';
+import Background             from './Background';
+import Cat                    from './Cat';
+import { Route }              from 'react-router-dom';
 import './App.css';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
 
-    this.handleClick = this.handleClick.bind(this);
-    
-  }
-  handleClick(event){
-    let width = window.innerWidth || document.body.clientWidth;
-
-    let links = document.getElementsByClassName('link');
-
-    for (let i = 0; i < links.length; i++) {
-        // console.log(links[i]); 
-        if(event.clientY > links[i].getBoundingClientRect().top 
-        && event.clientY < links[i].getBoundingClientRect().top+links[i].getBoundingClientRect().height 
-        && event.clientX > links[i].getBoundingClientRect().x 
-        && event.clientX < links[i].getBoundingClientRect().x+ links[i].getBoundingClientRect().width){
-            links[i].click()
-            console.log('clicked')
-
-        }
-        
-    }
-
-  }
-  componentDidMount() {
-    document.addEventListener('click', this.handleClick);
-   
-  }
+export default class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Backgroundcomponent />
-        <NavigationBar />
-        <Intro />
-        {/* <FullpageComponent /> */}
-        <Projects />
-        <Experiences />
-        <Contact />
+      <div
+        style={{
+          paddingTop    : '140px',
+        }}
+      >
+        <Background />
+        <Route path="*" component={ NavigationBar } />
+        <Route exact path="/" component={ Intro } />
+        <Route path="/projects" component={ Projects } />
+        <Route path="/experiences" component={ Experiences } />
+        <Route path="/contact" component={ Contact } />
+        <Route path="/about" component={ Cat } />
       </div>
     );
   }
 }
-
-export default App;

@@ -1,23 +1,12 @@
 #Contact{
-    margin-top: 25vw;
-    margin-bottom: 25vw;
-
+    position: fixed;
+    bottom: 0;
 }
-h1{
-    color: #DDD;
-    font-size: 5rem;
-    font-family: 'Perfograma';
-}
-h2{
-    color: white;
-    font-family: 'Perfograma';
-}
-#Contact a:link{
+#Contact a{
     text-decoration: none;
     color: #AAA;
 }
-#Contact a:visited{
-    text-decoration: none;
-    color: #777;
+#Contact a:hover{
+    color: rgba(255, 0, 0, 0.459);
 }
 

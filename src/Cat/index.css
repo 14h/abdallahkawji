@@ -953,12 +953,15 @@
   }
   /* body, html { */
 .cat-component{
-    height: 100%;
-    width: 100%;
+    height: 100vw;
+    width: 100vw;
+    position: fixed;
+    top: 0;
     margin: 0;
     padding: 0;
-    background-color: #191a1a;
+    /* background-color: #191a1a; */
     overflow: hidden;
+    z-index: 9;
   }
   
   *, *:before, *:after {
@@ -971,7 +974,7 @@
             animation-fill-mode: both;
   }
   
-  *:before, *:after {
+  .cat-component *:before, .cat-component *:after {
     content: '';
     display: block;
   }
