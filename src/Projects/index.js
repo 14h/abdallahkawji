@@ -9,14 +9,20 @@ export default class Projects extends Component{
             var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
             if (currentScroll > 0) {
                 window.requestAnimationFrame(smoothscroll);
-                window.scrollTo (0,currentScroll - (currentScroll/5));
+                window.scrollTo ( 0, currentScroll - ( currentScroll / 5 ) );
             }
         })();
-        const projects = document.getElementById('Projects');
-        window.setTimeout(()=>{
-            projects.style.opacity = 1;
-            projects.style.marginTop = 0;
-        }, 200);
+
+        const projects = document.getElementsByClassName('Projects');
+        for( let projectIndex in Array.from( projects ) ){
+            window.setTimeout(()=>{
+                if( projects.item( projectIndex ) )
+                {
+                    projects.item( projectIndex ).style.opacity = 1;
+                    projects.item( projectIndex ).style.marginTop = 0;
+                }
+            }, projectIndex * 200);
+        }
 
     }
     render() {
@@ -27,16 +33,14 @@ export default class Projects extends Component{
                 marginRight     : '5vw',
                 minHeight       : '700px',
                 maxWidth        : '100vw',
-                transition      : 'all 0.5s linear',
-                opacity         : 0,
                 color           : '#FFF',
                 paddingTop      : '30px',
-                marginTop       : '50px',
+                transition      : 'all 0.5s linear',
             }}
             id='Projects'
         >
 
-            <div className='Projects'>
+            <div className='Projects' style={{transition : 'all 0.5s linear', opacity : 0,  marginTop : '50px',}}>
                 <div className='project'>
                     <a
                         className='project-title'
@@ -66,7 +70,7 @@ export default class Projects extends Component{
                     </div>
                 </div>
             </div>
-            <div className='Projects'>
+            <div className='Projects' style={{transition : 'all 0.5s linear', opacity : 0,  marginTop : '50px',}}>
                 <div className='project'>
                     <a
                         className='project-title'
@@ -96,7 +100,7 @@ export default class Projects extends Component{
                     </div>
                 </div>
             </div>
-            <div className='Projects'>
+            <div className='Projects' style={{transition : 'all 0.5s linear', opacity : 0,  marginTop : '50px',}}>
                 <div className='project'>
                     <a
                         className='project-title'
@@ -126,7 +130,7 @@ export default class Projects extends Component{
                     </div>
                 </div>
             </div>
-            <div className='Projects'>
+            <div className='Projects' style={{transition : 'all 0.5s linear', opacity : 0,  marginTop : '50px',}}>
                 <div className='project'>
                     <div className='project-title'>
                         <h2>C4ME</h2>
