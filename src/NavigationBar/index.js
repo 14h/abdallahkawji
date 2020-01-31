@@ -97,24 +97,24 @@ const NavigationBar = (props) =>
                 paddingTop          : 0,
             }}
         >
-            <Link
-                to='/projects'
-                className={ props.location.pathname.includes('projects') ? 'nav-item selected' : 'nav-item' }
-            >
-                projects
-            </Link>
+            {/*<Link*/}
+            {/*    to='/projects'*/}
+            {/*    className={ props.location.pathname.includes('projects') ? 'nav-item selected' : 'nav-item' }*/}
+            {/*>*/}
+            {/*    Projects*/}
+            {/*</Link>*/}
             <Link
                 to='/experiences'
                 className={ props.location.pathname.includes('experiences') ? 'nav-item selected' : 'nav-item' }
             >
                 Experiences
             </Link>
-            <Link
-                to='/about'
-                className={ props.location.pathname.includes('about') ? 'nav-item selected' : 'nav-item' }
-            >
-                About Me
-            </Link>
+            {/*<Link*/}
+            {/*    to='/about'*/}
+            {/*    className={ props.location.pathname.includes('about') ? 'nav-item selected' : 'nav-item' }*/}
+            {/*>*/}
+            {/*    About Me*/}
+            {/*</Link>*/}
             <Link
                 to='/contact'
                 className={ props.location.pathname.includes('contact') ? 'nav-item selected' : 'nav-item' }

@@ -1,8 +1,159 @@
 import React from 'react';
-import Particles from 'react-particles-js';
+import mojs from 'mo-js';
 
 
-export default function Background(){
+export const Background = () => {
+    const redCirc = new mojs.Shape({
+        left:0,
+        top: 0,
+        fill:           'none',
+        stroke:         'red',
+        radius: 15,
+        strokeWidth:    10,
+
+
+        duration:       100
+    })
+        .then({
+            strokeWidth:    0,
+            scale:          { 1: 2, easing: 'sin.in' },
+            duration: 500
+        });
+
+    const sparks = new mojs.Burst({
+        left:0,
+        top: 0,
+        radius: {0:30, easing:'cubic.out'},
+        angle:{0: 90,easing:'quad.out'},
+        children:{
+            shape: 'cross',
+            stroke: 'white',
+            points: 12,
+            radius:10,
+            fill:'none',
+            angle:{0:360},
+            duration:300
+
+        }
+
+
+    });
+
+    const redSparks = new mojs.Burst({
+        left: 0, top: 0,
+        count:8,
+        radius: { 150: 350 },
+        angle: {0:90 ,easing:'cubic.out'},
+        children: {
+            shape: 'line',
+            stroke: {'red':'transparent'},
+            strokeWidth: 5,
+            scaleX: {  0.5:0},
+            degreeShift:  'rand(-90, 90)',
+            radius:       'rand(20, 300)',
+            duration:     200,
+            delay:        'rand(0, 150)',
+
+        }
+    });
+
+    const triangles = new mojs.Burst({
+        radius: { 0 : 1000,easing: 'cubic.out'},
+        angle:  {1080 : 0,easing: 'quad.out'},
+        left: 0,        top: 0,
+        count: 20,
+        children : {
+            shape: 'polygon',
+            points: 3,
+            radius: { 10 : 100 },
+            fill: ['red','yellow','blue','green'],
+            duration: 3000
+        }
+    });
+
+    const pentagons = new mojs.Burst({
+        radius: { 0 : 1000,easing: 'cubic.out'},
+        angle: {0 : 720,easing: 'quad.out'},
+        left: 0,        top: 0,
+        count: 20,
+        children : {
+            shape: 'polygon',
+            radius: { 1 : 300 },
+            points: 5,
+            fill: ['purple','pink','yellow','green'],
+            delay:500,
+            duration: 3000
+        }
+    });
+
+    const lines = new mojs.Burst({
+        radius: { 0 : 1000,easing: 'cubic.out'},
+        angle: {0 : 1440,easing: 'cubic.out'},
+        left: 0,        top: 0,
+        count: 50,
+        children : {
+            shape: 'line',
+            radius: { 1 : 100,easing:'elastic.out' },
+            fill: 'none',
+            stroke: ['red','orange'],
+            delay:         'stagger(10)',
+            duration: 1000
+        }
+    });
+
+    const redSquares = new mojs.Burst({
+        radius: { 0 : 1000,easing: 'cubic.out'},
+        angle: {360 : 0,easing: 'quad.out'},
+        left: 0,        top: 0,
+        count: 20,
+        children : {
+            shape: 'rect',
+            radiusX: { 1 : 1000 },
+            radiusY:50,
+            points: 5,
+            fill: 'none',
+            stroke: {'red':'orange'},
+            strokeWidth:{5:15},
+            delay:1000,
+            duration: 3000
+        }
+    });
+
+
+
+    document.addEventListener( 'click', function (e) {
+
+        redCirc
+            .tune({ x: e.pageX, y: e.pageY,  })
+            .replay();
+
+        sparks
+            .tune({ x: e.pageX, y: e.pageY  })
+            .replay();
+
+        redSparks
+            .tune({ x: e.pageX, y: e.pageY  })
+            .replay()
+            .generate();
+
+        triangles
+            .tune({ x: e.pageX, y: e.pageY,})
+            .replay()
+
+        pentagons
+            .tune({ x: e.pageX, y: e.pageY,})
+            .replay()
+
+        lines
+            .tune({ x: e.pageX, y: e.pageY,})
+            .replay()
+
+        redSquares
+            .tune({ x: e.pageX, y: e.pageY,})
+            .replay()
+
+
+    });
   return (
 
       <div
@@ -13,127 +164,7 @@ export default function Background(){
           top       : 0,
         }}
       >
-          <Particles
-            height="100vh"
-            params={{
-              particles: {
-                number: {
-                  value: 43,
-                  density: {
-                    enable: true,
-                    value_area: 2405.118091298284
-                  }
-                },
-                color: {
-                  value: "#ffffff"
-                },
-                shape: {
-                  type: "circle",
-                  stroke: {
-                    width: 0,
-                    color: "#000000"
-                  },
-                  polygon: {
-                    nb_sides: 5
-                  },
-                  image: {
-                    src: "img/github.svg",
-                    width: 100,
-                    height: 100
-                  }
-                },
-                opacity: {
-                  value: 0.5772283419115882,
-                  random: true,
-                  anim: {
-                    enable: false,
-                    speed: 1,
-                    opacity_min: 0.1,
-                    sync: false
-                  }
-                },
-                size: {
-                  value: 3,
-                  random: true,
-                  anim: {
-                    enable: false,
-                    speed: 40,
-                    size_min: 0.1,
-                    sync: false
-                  }
-                },
-                line_linked: {
-                  enable: false,
-                  distance: 150,
-                  color: "#ffffff",
-                  opacity: 0.4,
-                  width: 1
-                },
-                move: {
-                  enable: true,
-                  speed: 6,
-                  direction: "bottom",
-                  random: true,
-                  straight: true,
-                  out_mode: "out",
-                  bounce: false,
-                  attract: {
-                    enable: false,
-                    rotateX: 600,
-                    rotateY: 1200
-                  }
-                }
-              },
-              interactivity: {
-                detect_on: "window",
-                events: {
-                  onhover: {
-                    enable: false,
-                    mode: "repulse"
-                  },
-                  onclick: {
-                    enable: true,
-                    mode: "push"
-                  },
-                  resize: true
-                },
-                modes: {
-                  grab: {
-                    distance: 400,
-                    line_linked: {
-                      opacity: 1
-                    }
-                  },
-                  bubble: {
-                    distance: 400,
-                    size: 40,
-                    duration: 2,
-                    opacity: 8,
-                    speed: 3
-                  },
-                  repulse: {
-                    distance: 200,
-                    duration: 0.4
-                  },
-                  push: {
-                    particles_nb: 4
-                  },
-                  remove: {
-                    particles_nb: 2
-                  }
-                }
-              },
-              retina_detect: true
-            }}
-            style={{
-              width: '100%',
-              height: '100vh',
-              position: 'fixed',
-              top:'0px',
-              left:'0px'
 
-            }}
-          />
       </div>
   );
 }

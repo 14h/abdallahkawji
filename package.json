@@ -5,6 +5,7 @@
   "dependencies": {
     "eslint": "^4.19.1",
     "fullpage-react": "^3.1.0",
+    "mo-js": "^0.288.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-particles-js": "^2.4.2",

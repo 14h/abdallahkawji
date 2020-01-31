@@ -23,7 +23,6 @@ export default class Experiences extends Component{
                 }
             }, experienceIndex * 200);
         }
-
     }
     render() {
         return (
